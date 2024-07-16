@@ -64,8 +64,6 @@ public class Game implements TowerDefenseEventsHandlerInterface {
         this.enemy_manager.clear();
         this.map.set_map();
         this.state.set_state(new StandbyState());
-        ;
-
     }
 
     /*
@@ -105,7 +103,7 @@ public class Game implements TowerDefenseEventsHandlerInterface {
     /*
      * This method is used to update the game
      * 
-     * @param: nothing
+     * @param: tower: the tower to be bought
      * 
      * @return: nothing
      */
@@ -120,7 +118,9 @@ public class Game implements TowerDefenseEventsHandlerInterface {
     /*
      * This method is used to update the game
      * 
-     * @param: nothing
+     * @param: x: the x coordinate of the tower
+     * @param: y: the y coordinate of the tower
+     * @param: type: the type of the tower
      * 
      * @return: nothing
      */
@@ -150,42 +150,42 @@ public class Game implements TowerDefenseEventsHandlerInterface {
     }
 
     /*
-     * This method is used to get the map
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the map
+     * @return: nothing
      */
     public EnemyManager get_enemy_manager() {
         return this.enemy_manager;
     }
 
     /*
-     * This method is used to get the base
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the base
+     * @return: nothing
      */
     public Base get_base() {
         return this.base;
     }
 
     /*
-     * This method is used to get the money
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the money
+     * @return: nothing
      */
     public int get_money() {
         return this.money;
     }
 
     /*
-     * This method is used to add money
+     * This method is used to update the game
      * 
-     * @param money: the amount of money that will be added
+     * @param: money: the amount of money to be added
      * 
      * @return: nothing
      */
@@ -194,51 +194,51 @@ public class Game implements TowerDefenseEventsHandlerInterface {
     }
 
     /*
-     * This method is used to get the level
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the level
+     * @return: nothing
      */
     public int get_level() {
         return this.level;
     }
 
     /*
-     * This method is used to get the towers
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the towers
+     * @return: nothing
      */
     public Vector<Tower> get_towers() {
         return this.towers;
     }
 
     /*
-     * This method is used to get the enemies
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the enemies
+     * @return: nothing
      */
     public List<Enemy> get_enemies() {
         return this.enemy_manager.get_enemies();
     }
 
     /*
-     * This method is used to get the state
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
-     * @return: the state
+     * @return: nothing
      */
     public StateManager get_state() {
         return this.state;
     }
 
     /*
-     * This method is used to increment the level
+     * This method is used to update the game
      * 
      * @param: nothing
      * 
@@ -249,9 +249,9 @@ public class Game implements TowerDefenseEventsHandlerInterface {
     }
 
     /*
-     * This method is used to gain money
+     * This method is used to update the game
      * 
-     * @param money: the amount of money that will be gained
+     * @param: money: the amount of money to be added
      * 
      * @return: nothing
      */

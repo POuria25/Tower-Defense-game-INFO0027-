@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/*
- * This class is used to manage the enemies in the game.
- */
+
 public class EnemyManager {
 
     private List<Enemy> enemies;
@@ -21,8 +19,9 @@ public class EnemyManager {
     private List<Tower> towers;
     private static EnemyManager enemyManager = null;
 
+
     /*
-     * Constructor for the EnemyManager class
+     * This constructor is used to create an EnemyManager object.
      */
     private EnemyManager() {
         this.enemies = new Vector<Enemy>();
@@ -30,12 +29,11 @@ public class EnemyManager {
         this.towers = new ArrayList<>();
     }
 
+
     /*
-     * This method is used to get the instance of the EnemyManager class
+     * This method is used to add a tower to the list of towers
      * 
-     * @param: nothing
-     * 
-     * @return: the instance of the EnemyManager class
+     * @param tower: the tower to be added
      */
     public static EnemyManager get_enemiesManager() {
         if (enemyManager == null) {
@@ -44,12 +42,11 @@ public class EnemyManager {
         return enemyManager;
     }
 
+
     /*
      * This method is used to add a tower to the list of towers
      * 
      * @param tower: the tower to be added
-     * 
-     * @return: nothing
      */
     public void generate_ennemies(int level) {
         for (int i = 0; i < (level + 1) * 2; i++) {
@@ -65,11 +62,9 @@ public class EnemyManager {
     }
 
     /*
-     * This method is used to update the enemies
+     * This method is used to add a tower to the list of towers
      * 
-     * @param: nothing
-     * 
-     * @return: nothing
+     * @param tower: the tower to be added
      */
     public void update() {
         for (Enemy enemy : enemies) {
@@ -90,8 +85,6 @@ public class EnemyManager {
      * This method is used to add a tower to the list of towers
      * 
      * @param tower: the tower to be added
-     * 
-     * @return: nothing
      */
     public void check_dead() {
         enemies.removeIf(Enemy::is_dead);
@@ -101,9 +94,7 @@ public class EnemyManager {
      * This method is used to add a tower to the list of towers
      * 
      * @param tower: the tower to be added
-     * 
-     * @return: nothing
-     */
+     */    
     public List<Enemy> get_enemies() {
         return this.enemies;
     }
@@ -112,11 +103,8 @@ public class EnemyManager {
      * This method is used to add a tower to the list of towers
      * 
      * @param tower: the tower to be added
-     * 
-     * @return: nothing
      */
     public void clear() {
         this.enemies.clear();
     }
-
 }

@@ -9,9 +9,7 @@ import javax.swing.ImageIcon;
 import java.awt.Point;
 import java.awt.geom.Point2D;
 
-/*
- * This class is used to represent the entities in the game.
- */
+
 public class Entity {
 
     private Point2D position;
@@ -24,6 +22,12 @@ public class Entity {
 
     /*
      * Constructor for the Entity class
+     * 
+     * @param x: the x coordinate of the entity
+     * @param y: the y coordinate of the entity
+     * @param damage: the damage of the entity
+     * @param range: the range of the entity
+     * @param fireRate: the fire rate of the entity
      */
     public Entity(int x, int y, float damage, float range, float fireRate) {
         this.position = new Point(x, y);
@@ -70,7 +74,6 @@ public class Entity {
      * This method is used to set the position of the entity
      * 
      * @param x: the x coordinate of the entity
-     * 
      * @param y: the y coordinate of the entity
      * 
      * @return: nothing
@@ -100,6 +103,7 @@ public class Entity {
     public long get_lastAttackTime() {
         return lastAttackTime;
     }
+
 
     /*
      * This method is used to set the last attack time of the entity
@@ -217,7 +221,6 @@ public class Entity {
      * This method is used to set the x and y coordinates of the entity
      * 
      * @param x: the x coordinate of the entity
-     * 
      * @param y: the y coordinate of the entity
      * 
      * @return: nothing
