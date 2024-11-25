@@ -1,5 +1,4 @@
 #KATOUZIAN Pouria s192865
-#HOUYON Manuel s203802
 
 all:
 	mkdir -p bin && javac -d bin -classpath graphics.jar:bin src/*.java
